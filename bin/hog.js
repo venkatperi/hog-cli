@@ -20,5 +20,11 @@ try {
 }
 
 //noinspection JSUnresolvedFunction
-var Hog = require( hogpath );
-new Hog().cli();
+try {
+  var Hog = require( hogpath );
+  new Hog().cli();
+}
+catch (err) {
+ console.log(err);
+  process.exit(98);
+}
