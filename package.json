@@ -5,8 +5,8 @@
     "type": "git",
     "url": "https://github.com/venkatperi/hog-cli.git"
   },
-  "preferGlobal": false,
-  "description": "Simplified gruntfile wrapper",
+  "preferGlobal": true,
+  "description": "CLI for lean-hog",
   "dependencies": {
     "findup-sync": "latest",
     "resolve": "latest"
@@ -14,7 +14,7 @@
   "bundleDependencies": [],
   "main": "dist/lib/hog",
   "scripts": {
-    "prepublish": "grun",
+    "prepublish": "grunt",
     "test": "mocha"
   },
   "devDependencies": {
