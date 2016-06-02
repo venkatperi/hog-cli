@@ -14,8 +14,8 @@
   "bundleDependencies": [],
   "main": "dist/lib/hog",
   "scripts": {
-    "prepublish": "hog",
-    "test": "mocha && istanbul report text-summary lcov && rm -rf ./coverage"
+    "prepublish": "grun",
+    "test": "mocha"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0",
