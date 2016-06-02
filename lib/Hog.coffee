@@ -2,8 +2,14 @@ _ = require 'lodash'
 grunt = require 'grunt'
 cli = require './cli'
 
+log =
+  info : ( msg ) -> grunt.log.writeln msg
+  error : ( msg ) -> grunt.log.error msg
+  debug : ( msg ) -> grunt.log.debug msg
+
 class Hog
   constructor : ( opts = {} ) ->
+    @log = log
     @config = {}
     @tasks = []
 
@@ -15,6 +21,8 @@ class Hog
     require(@hogfile).call @
     @configGrunt()
 
+  cli : -> cli()
+
   configGrunt : =>
     #console.log JSON.stringify @config, null, 2
     @pkg = grunt.file.readJSON('package.json')
@@ -23,7 +31,6 @@ class Hog
     @loadGruntNpmTasks()
     for t in @tasks
       grunt.registerTask.apply grunt, t
-    cli()
 
   loadGruntNpmTasks : =>
     dev = Object.keys @pkg.devDependencies

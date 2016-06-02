@@ -10,7 +10,7 @@ module.exports = ->
 
   @task 'clean:dist', dist, '*.{js,map}', 'lib/**/*.{map,js}'
 
-  @task 'abc', -> console.log 'test'
+  @task 'abc', -> @log.info 'test'
 
   @task 'default', [ 'clean:dist', 'coffee:dist' ]
 

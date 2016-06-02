@@ -19,7 +19,6 @@ try {
   }
 }
 
-// Everything looks good. Require local hog and run it.
 //noinspection JSUnresolvedFunction
 var Hog = require( hogpath );
-new Hog();
+new Hog().cli();
