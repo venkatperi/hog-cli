@@ -24,7 +24,7 @@ try {
   var Hog = require( hogpath );
   new Hog().cli();
 }
-catch (err) {
- console.log(err);
-  process.exit(98);
+catch ( err ) {
+  console.log( err.message );
+  process.exit( 98 );
 }
