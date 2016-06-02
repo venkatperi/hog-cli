@@ -11,6 +11,7 @@
     "findup-sync": "latest",
     "grunt-known-options": "^1.1.0",
     "lodash": "^4.13.1",
+    "nopt": "^3.0.6",
     "resolve": "latest"
   },
   "bundleDependencies": [],
