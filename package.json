@@ -10,6 +10,7 @@
   "dependencies": {
     "findup-sync": "latest",
     "grunt-known-options": "^1.1.0",
+    "lodash": "^4.13.1",
     "resolve": "latest"
   },
   "bundleDependencies": [],
